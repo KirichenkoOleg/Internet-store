@@ -114,7 +114,6 @@ gulp.task("browser-sync", function (){
  gulp.task("watch", function (){
 	gulp.watch("app/index.html", ['html'])
 	gulp.watch("app/css/**/*.css", ['css'])
-	gulp.watch("app/css/**/*.js", ['css'])
  });
  
  gulp.task("server", function() {
@@ -122,10 +121,10 @@ gulp.task("browser-sync", function (){
  
  });
  gulp.task('sass', function () {
-    return gulp.src('./app/css/sass/app.scss')
+    return gulp.src('./app/styles/style.scss')
      .pipe(sourcemaps.init())
      .pipe(sass().on('error', sass.logError))
      .pipe(sourcemaps.write())
-     .pipe(gulp.dest('./app/css'));
+     .pipe(gulp.dest('./app/styles'));
    });
  gulp.task ( "default", ['server']);
