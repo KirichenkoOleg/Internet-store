@@ -145,7 +145,7 @@ gulp.task("browser-sync", function (){
  
  });
  gulp.task('sass', function () {
-    return gulp.src('./app/styles/*.scss')
+    return gulp.src('./app/styles/scss/*.scss')
      .pipe(sourcemaps.init())
      .pipe(sass().on('error', sass.logError))
      .pipe(sourcemaps.write())
