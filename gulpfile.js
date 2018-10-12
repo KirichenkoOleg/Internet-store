@@ -23,11 +23,11 @@ const path = {
 			
 		],
 	
-		fonts: ["app/fonts/**/*","app/webfonts/**/*"],
+		fonts: "app/fonts/**",
 		images:"app/img/**/*"
 	},
 	build :{
-		html:"build",
+		html:"build/",
 		js: "build/js/",
 		css: "build/css/",
 		fonts:"build/fonts/",
@@ -121,7 +121,7 @@ gulp.task("browser-sync", function (){
  
  });
  gulp.task('sass', function () {
-    return gulp.src('./app/styles/style.scss')
+    return gulp.src('./app/styles/*.scss')
      .pipe(sourcemaps.init())
      .pipe(sass().on('error', sass.logError))
      .pipe(sourcemaps.write())
