@@ -23,7 +23,7 @@ const path = {
 			
 		],
 	
-		fonts: "app/fonts/**",
+		fonts: "app/fonts/**/*",
 		images:"app/img/**/*"
 	},
 	build :{
