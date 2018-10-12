@@ -106,6 +106,7 @@ gulp.task("build",shell.task([
 	'gulp clean',
 	'gulp img',
 	'gulp html',
+	'gulp sass',
 	'gulp css21',
 	'gulp css28',
 	'gulp css23',
