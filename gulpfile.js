@@ -15,6 +15,7 @@ const path = {
 	src:{
 		html:["app/index.html",
 		"app/components/*.html"],
+		html28:"app/components/contact.html",
 		styles21:"app/styles/upload_product.css",
 		styles28:"app/styles/contact.css",
 		styles23:"app/styles/withdrawals.css",
@@ -78,6 +79,12 @@ gulp.task("html",function(){
 		.pipe(gulp.dest(path.build.html))
 		.pipe( reload({stream: true}));
 });
+gulp.task("html28",function(){
+	return gulp
+		.src(path.src.html28)
+		.pipe(gulp.dest(path.build.html))
+		.pipe( reload({stream: true}));
+});
 gulp.task("img",function(){
 	return gulp
 	.src(path.src.images)
@@ -106,6 +113,7 @@ gulp.task("build",shell.task([
 	'gulp clean',
 	'gulp img',
 	'gulp html',
+	'gulp html28',
 	'gulp css21',
 	'gulp css28',
 	'gulp css23',
@@ -123,7 +131,7 @@ gulp.task("browser-sync", function (){
 	browserSync({
 		startPath: "/",
 		server: {
-			baseDir: "build"
+			baseDir: "build/"
 		},
 		notify: false
 	});
@@ -136,7 +144,7 @@ gulp.task("browser-sync", function (){
  );
  
  gulp.task("watch", function (){
-	gulp.watch("app/index.html", ['html'])
+	gulp.watch("app/*.html", ['html'])
 	gulp.watch("app/css/**/*.css", ['css'])
  });
  
