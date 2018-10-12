@@ -13,39 +13,60 @@ const sourcemaps = require ('gulp-sourcemaps');
 
 const path = {
 	src:{
-		html:"app/index.html",
-		styles:[
-			"app/css/fonts.css",
-			"app/css/vendors/bootstrap.css",
-			"app/css/vendors/et-line.css",
-			"app/css/vendors/all.min.css",
-			"app/css/style.css"
-			
-		],
+		html:["app/index.html",
+		"app/components/*.html"],
+		styles21:"app/styles/upload_product.css",
+		styles28:"app/styles/contact.css",
+		styles23:"app/styles/withdrawals.css",
+		styles4:"app/styles/all_new_item.css",
+		styles3:"app/styles/main.css",
 	
 		fonts: "app/fonts/**/*",
 		images:"app/img/**/*"
 	},
 	build :{
 		html:"build/",
-		js: "build/js/",
-		css: "build/css/",
+		css: "build/styles/",
 		fonts:"build/fonts/",
 		images:"build/img/"
 	}
 };
 
-gulp.task("js",function() {
+gulp.task("css21",function(){
 	return gulp
-	.src(path.src.js)
-	.pipe(uglify())
-	.pipe(concat("main.js"))
-	.pipe(gulp.dest(path.build.js))
+	.src(path.src.styles21)
+	.pipe(minifyCss())
+	.pipe(concat("upload_product.css"))
+	.pipe(gulp.dest(path.build.css))
 	.pipe( reload({stream: true}));
 });
-gulp.task("css",function(){
+gulp.task("css28",function(){
 	return gulp
-	.src(path.src.styles)
+	.src(path.src.styles28)
+	.pipe(minifyCss())
+	.pipe(concat("contact.css"))
+	.pipe(gulp.dest(path.build.css))
+	.pipe( reload({stream: true}));
+});
+gulp.task("css23",function(){
+	return gulp
+	.src(path.src.styles23)
+	.pipe(minifyCss())
+	.pipe(concat("withdrawals.css"))
+	.pipe(gulp.dest(path.build.css))
+	.pipe( reload({stream: true}));
+});
+gulp.task("css4",function(){
+	return gulp
+	.src(path.src.styles4)
+	.pipe(minifyCss())
+	.pipe(concat("all_new_item.css"))
+	.pipe(gulp.dest(path.build.css))
+	.pipe( reload({stream: true}));
+});
+gulp.task("css3",function(){
+	return gulp
+	.src(path.src.styles3)
 	.pipe(minifyCss())
 	.pipe(concat("main.css"))
 	.pipe(gulp.dest(path.build.css))
@@ -85,8 +106,11 @@ gulp.task("build",shell.task([
 	'gulp clean',
 	'gulp img',
 	'gulp html',
-	'gulp css',
-	'gulp js',
+	'gulp css21',
+	'gulp css28',
+	'gulp css23',
+	'gulp css4',
+	'gulp css3',
 	'gulp font',
 	
 ]));
