@@ -17,7 +17,7 @@ const path = {
 		"app/components/*.html"],
 		html28:"app/components/contact.html",
 		styles21:["app/styles/upload_product.css","app/styles/fontawesome/fontawesome.css"],
-		styles28:["app/styles/contact.css","app/styles/fontawesome/fontawesome.css"],
+		styles28:["app/styles/contact.css","app/styles/fontawesome/fontawesome.css","app/styles/fontawesome/solid.css"],
 		styles23:["app/styles/withdrawals.css","app/styles/fontawesome/fontawesome.css"],
 		styles4:["app/styles/all_new_item.css","app/styles/fontawesome/fontawesome.css"],
 		styles3:["app/styles/main.css","app/styles/fontawesome/fontawesome.css"],
