@@ -13,8 +13,10 @@ const sourcemaps = require ('gulp-sourcemaps');
 
 const path = {
 	src:{
-		html:["app/index.html",
-		"app/components/*.html"],
+		html:[
+            "app/index.html",
+            "app/components/*.html"
+        ],
 		styles21:"app/styles/upload_product.css",
 		styles28:"app/styles/contact.css",
 		styles23:"app/styles/withdrawals.css",
@@ -82,20 +84,18 @@ gulp.task("img",function(){
 	return gulp
 	.src(path.src.images)
 	.pipe(imagemin([
-    imagemin.gifsicle({interlaced: true}),
-    imagemin.jpegtran({progressive: true}),
-    imagemin.optipng({optimizationLevel: 5}),
-    imagemin.svgo({
-        plugins: [
-            {removeViewBox: true},
-            {cleanupIDs: false}
-        ]
-    })
-]
-				  ,
-				  {
-    verbose: true
-}))
+        imagemin.gifsicle({interlaced: true}),
+        imagemin.jpegtran({progressive: true}),
+        imagemin.optipng({optimizationLevel: 5}),
+        imagemin.svgo({
+            plugins: [
+                {removeViewBox: true},
+                {cleanupIDs: false}
+            ]
+        })
+    ], {
+        verbose: true
+    }))
 	.pipe(gulp.dest(path.build.images))
 });
 
@@ -138,7 +138,13 @@ gulp.task("browser-sync", function (){
  
  gulp.task("watch", function (){
 	gulp.watch("app/index.html", ['html'])
-	gulp.watch("app/css/**/*.css", ['css'])
+    gulp.watch("app/styles/scss/*.scss", ['sass'])
+    
+	gulp.watch("app/styles/upload_product.css", ['css21'])
+	gulp.watch("app/styles/contact.css", ['css28'])
+	gulp.watch("app/styles/withdrawals.css", ['css23'])
+	gulp.watch("app/styles/all_new_item.css", ['css4'])
+	gulp.watch("app/styles/main.css", ['css3'])
  });
  
  gulp.task("server", function() {
