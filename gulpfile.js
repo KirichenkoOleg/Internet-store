@@ -16,11 +16,11 @@ const path = {
 		html:["app/index.html",
 		"app/components/*.html"],
 		html28:"app/components/contact.html",
-		styles21:"app/styles/upload_product.css",
-		styles28:"app/styles/contact.css",
-		styles23:"app/styles/withdrawals.css",
-		styles4:"app/styles/all_new_item.css",
-		styles3:"app/styles/main.css",
+		styles21:["app/styles/upload_product.css","app/styles/fontawesome/fontawesome.css"],
+		styles28:["app/styles/contact.css","app/styles/fontawesome/fontawesome.css"],
+		styles23:["app/styles/withdrawals.css","app/styles/fontawesome/fontawesome.css"],
+		styles4:["app/styles/all_new_item.css","app/styles/fontawesome/fontawesome.css"],
+		styles3:["app/styles/main.css","app/styles/fontawesome/fontawesome.css"],
 	
 		fonts: "app/fonts/**/*",
 		images:"app/img/**/*"
@@ -153,7 +153,7 @@ gulp.task("browser-sync", function (){
  
  });
  gulp.task('sass', function () {
-    return gulp.src('./app/styles/scss/*.scss')
+    return gulp.src('./app/styles/scss/**/*')
      .pipe(sourcemaps.init())
      .pipe(sass().on('error', sass.logError))
      .pipe(sourcemaps.write())

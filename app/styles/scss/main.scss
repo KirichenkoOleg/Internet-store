@@ -1,3 +1,14 @@
 @import "styles";
 @import "header";
 @import "footer";
+
+
+
+
+@for $i from 1 through 12{
+    $width:percentage($i/12);
+
+    .col-#{$i}{
+        width: $width;
+    }
+}
