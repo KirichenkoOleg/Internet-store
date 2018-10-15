@@ -113,11 +113,11 @@ gulp.task("build",shell.task([
 	'gulp clean',
 	'gulp img',
 	'gulp html',
-<<<<<<< HEAD
+
 	'gulp sass',
-=======
-	'gulp html28',
->>>>>>> egor
+
+	
+
 	'gulp css21',
 	'gulp css28',
 	'gulp css23',
