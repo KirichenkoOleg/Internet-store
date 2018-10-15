@@ -16,11 +16,11 @@ const path = {
 		html:["app/index.html",
 		"app/components/*.html"],
 		html28:"app/components/contact.html",
-		styles21:["app/styles/upload_product.css","app/styles/fontawesome/fontawesome.css"],
+		styles21:["app/styles/upload_product.css","app/styles/fontawesome/fontawesome.css","app/styles/fontawesome/solid.css"],
 		styles28:["app/styles/contact.css","app/styles/fontawesome/fontawesome.css","app/styles/fontawesome/solid.css"],
-		styles23:["app/styles/withdrawals.css","app/styles/fontawesome/fontawesome.css"],
-		styles4:["app/styles/all_new_item.css","app/styles/fontawesome/fontawesome.css"],
-		styles3:["app/styles/main.css","app/styles/fontawesome/fontawesome.css"],
+		styles23:["app/styles/withdrawals.css","app/styles/fontawesome/fontawesome.css","app/styles/fontawesome/solid.css"],
+		styles4:["app/styles/all_new_item.css","app/styles/fontawesome/fontawesome.css","app/styles/fontawesome/solid.css"],
+		styles3:["app/styles/main.css","app/styles/fontawesome/fontawesome.css","app/styles/fontawesome/solid.css"],
 	
 		fonts: "app/fonts/**/*",
 		images:"app/img/**/*"
@@ -113,15 +113,7 @@ gulp.task("build",shell.task([
 	'gulp clean',
 	'gulp img',
 	'gulp html',
-<<<<<<< HEAD
-
 	'gulp sass',
-
-	
-
-=======
-	'gulp sass',
->>>>>>> egor
 	'gulp css21',
 	'gulp css28',
 	'gulp css23',
