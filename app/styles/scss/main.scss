@@ -1,3 +1,107 @@
+@import "reset";
+@import "variables";
 @import "styles";
 @import "header";
 @import "footer";
+
+
+
+body {
+	a {
+        display: inline-block;
+		text-decoration: none;
+	}
+}
+
+.section-1 {
+    padding: 120px 0 110px 0;
+    background-color: #f4f6f5;
+
+    .sectionsTitle {
+        color: #2e353a;
+        font-size: 36px;
+        font-family: 'Roboto-Bold';
+        margin-bottom: 60px;
+    }
+
+    .nav-tabs {
+    	display: flex;
+    	justify-content: space-between;
+
+    	li {
+			a {
+				padding: 10px 20px;
+				background-color: #ffffff;
+				color: #2e353a;
+				font-size: 14px;
+                font-family: 'Roboto-Medium';
+				transition-duration: .3s;
+
+				&:hover {
+					background-color: #c94d3f;
+					color: #ffffff;
+				}
+			}
+    	}
+    }
+    
+    .allProducts {
+        .products {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #ffffff;
+            border: 1px solid rgb(235, 238, 239);
+            border-bottom: 1px solid rgb(218, 223, 226);
+            
+            &:hover {
+                box-shadow: 0 5px 10px #d8d9d9;
+                transition-duration: .2s;
+            }
+            
+            img {
+                width: 100%;
+            }
+            
+            .infoBlock {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                width: 100%;
+                
+                .path-1 {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    border-bottom: 1px solid #e8ecf1;
+                    padding: 30px 30px 20px;
+                    
+                    .unit {
+                        h3 {
+                            font-size: 18px;
+                            color: #2e353a;
+                            margin-bottom: 10px;
+                            font-family: 'Roboto-Medium';
+                        }
+                    
+                        h4 {
+                            color: #9cc254;
+                            font-size: 14px;
+                            font-family: 'Roboto-Medium';
+                        }
+                    }
+                    
+                    h3 {
+                        font-size: 20px;
+                        color: #2e353a;
+                        font-family: 'Roboto-Bold';
+                    }
+                }
+                
+                .path-2 {
+//                    padding: 20px 30px 20px;
+                }
+            }
+        }
+    }
+}

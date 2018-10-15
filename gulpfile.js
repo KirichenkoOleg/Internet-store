@@ -18,10 +18,9 @@ const path = {
 		html28:"app/components/contact.html",
 		styles21:["app/styles/upload_product.css","app/styles/fontawesome/fontawesome.css","app/styles/fontawesome/solid.css"],
 		styles28:["app/styles/contact.css","app/styles/fontawesome/fontawesome.css","app/styles/fontawesome/solid.css"],
-		styles23:["app/styles/withdrawals.css","app/styles/fontawesome/fontawesome.css","app/styles/fontawesome/solid.css"],
-		styles4:["app/styles/all_new_item.css","app/styles/fontawesome/fontawesome.css","app/styles/fontawesome/solid.css"],
-		styles3:["app/styles/main.css","app/styles/fontawesome/fontawesome.css","app/styles/fontawesome/solid.css"],
-	
+		styles23:["app/styles/withdrawals.css","app/styles/fontawesome/fontawesome.css"],
+		styles4:["app/styles/all_new_item.css","app/styles/fontawesome/fontawesome.css"],
+		styles3:["app/styles/main.css","app/styles/fontawesome/fontawesome.css"],
 		fonts: "app/fonts/**/*",
 		images:"app/img/**/*"
 	},
@@ -89,20 +88,18 @@ gulp.task("img",function(){
 	return gulp
 	.src(path.src.images)
 	.pipe(imagemin([
-    imagemin.gifsicle({interlaced: true}),
-    imagemin.jpegtran({progressive: true}),
-    imagemin.optipng({optimizationLevel: 5}),
-    imagemin.svgo({
-        plugins: [
-            {removeViewBox: true},
-            {cleanupIDs: false}
-        ]
-    })
-]
-				  ,
-				  {
-    verbose: true
-}))
+        imagemin.gifsicle({interlaced: true}),
+        imagemin.jpegtran({progressive: true}),
+        imagemin.optipng({optimizationLevel: 5}),
+        imagemin.svgo({
+            plugins: [
+                {removeViewBox: true},
+                {cleanupIDs: false}
+            ]
+        })
+    ], {
+        verbose: true
+    }))
 	.pipe(gulp.dest(path.build.images))
 });
 
@@ -144,8 +141,17 @@ gulp.task("browser-sync", function (){
  );
  
  gulp.task("watch", function (){
-	gulp.watch("app/*.html", ['html'])
-	gulp.watch("app/css/**/*.css", ['css'])
+	gulp.watch("app/index.html", ['html'])
+	gulp.watch("app/components/*.html", ['html'])
+    
+     
+    gulp.watch("app/styles/scss/*.scss", ['sass'])
+    
+	gulp.watch("app/styles/upload_product.css", ['css21'])
+	gulp.watch("app/styles/contact.css", ['css28'])
+	gulp.watch("app/styles/withdrawals.css", ['css23'])
+	gulp.watch("app/styles/all_new_item.css", ['css4'])
+	gulp.watch("app/styles/main.css", ['css3'])
  });
  
  gulp.task("server", function() {
