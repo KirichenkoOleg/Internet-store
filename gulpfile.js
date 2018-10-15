@@ -142,6 +142,9 @@ gulp.task("browser-sync", function (){
  
  gulp.task("watch", function (){
 	gulp.watch("app/index.html", ['html'])
+	gulp.watch("app/components/*.html", ['html'])
+    
+     
     gulp.watch("app/styles/scss/*.scss", ['sass'])
     
 	gulp.watch("app/styles/upload_product.css", ['css21'])
