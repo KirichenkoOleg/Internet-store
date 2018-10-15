@@ -13,16 +13,14 @@ const sourcemaps = require ('gulp-sourcemaps');
 
 const path = {
 	src:{
-		html:[
-            "app/index.html",
-            "app/components/*.html"
-        ],
-		styles21:"app/styles/upload_product.css",
-		styles28:"app/styles/contact.css",
-		styles23:"app/styles/withdrawals.css",
-		styles4:"app/styles/all_new_item.css",
-		styles3:"app/styles/main.css",
-	
+		html:["app/index.html",
+		"app/components/*.html"],
+		html28:"app/components/contact.html",
+		styles21:["app/styles/upload_product.css","app/styles/fontawesome/fontawesome.css"],
+		styles28:["app/styles/contact.css","app/styles/fontawesome/fontawesome.css"],
+		styles23:["app/styles/withdrawals.css","app/styles/fontawesome/fontawesome.css"],
+		styles4:["app/styles/all_new_item.css","app/styles/fontawesome/fontawesome.css"],
+		styles3:["app/styles/main.css","app/styles/fontawesome/fontawesome.css"],
 		fonts: "app/fonts/**/*",
 		images:"app/img/**/*"
 	},
@@ -80,6 +78,12 @@ gulp.task("html",function(){
 		.pipe(gulp.dest(path.build.html))
 		.pipe( reload({stream: true}));
 });
+gulp.task("html28",function(){
+	return gulp
+		.src(path.src.html28)
+		.pipe(gulp.dest(path.build.html))
+		.pipe( reload({stream: true}));
+});
 gulp.task("img",function(){
 	return gulp
 	.src(path.src.images)
@@ -124,7 +128,7 @@ gulp.task("browser-sync", function (){
 	browserSync({
 		startPath: "/",
 		server: {
-			baseDir: "build"
+			baseDir: "build/"
 		},
 		notify: false
 	});
@@ -152,7 +156,7 @@ gulp.task("browser-sync", function (){
  
  });
  gulp.task('sass', function () {
-    return gulp.src('./app/styles/scss/*.scss')
+    return gulp.src('./app/styles/scss/**/*')
      .pipe(sourcemaps.init())
      .pipe(sass().on('error', sass.logError))
      .pipe(sourcemaps.write())
