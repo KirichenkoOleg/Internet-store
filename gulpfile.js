@@ -15,11 +15,12 @@ const path = {
 	src:{
 		html:["app/index.html",
 		"app/components/*.html"],
-		styles21:"app/styles/upload_product.css",
-		styles28:"app/styles/contact.css",
-		styles23:"app/styles/withdrawals.css",
-		styles4:"app/styles/all_new_item.css",
-		styles3:"app/styles/main.css",
+		html28:"app/components/contact.html",
+		styles21:["app/styles/upload_product.css","app/styles/fontawesome/fontawesome.css"],
+		styles28:["app/styles/contact.css","app/styles/fontawesome/fontawesome.css"],
+		styles23:["app/styles/withdrawals.css","app/styles/fontawesome/fontawesome.css"],
+		styles4:["app/styles/all_new_item.css","app/styles/fontawesome/fontawesome.css"],
+		styles3:["app/styles/main.css","app/styles/fontawesome/fontawesome.css"],
 	
 		fonts: "app/fonts/**/*",
 		images:"app/img/**/*"
@@ -78,6 +79,12 @@ gulp.task("html",function(){
 		.pipe(gulp.dest(path.build.html))
 		.pipe( reload({stream: true}));
 });
+gulp.task("html28",function(){
+	return gulp
+		.src(path.src.html28)
+		.pipe(gulp.dest(path.build.html))
+		.pipe( reload({stream: true}));
+});
 gulp.task("img",function(){
 	return gulp
 	.src(path.src.images)
@@ -106,7 +113,11 @@ gulp.task("build",shell.task([
 	'gulp clean',
 	'gulp img',
 	'gulp html',
+<<<<<<< HEAD
 	'gulp sass',
+=======
+	'gulp html28',
+>>>>>>> egor
 	'gulp css21',
 	'gulp css28',
 	'gulp css23',
@@ -124,7 +135,7 @@ gulp.task("browser-sync", function (){
 	browserSync({
 		startPath: "/",
 		server: {
-			baseDir: "build"
+			baseDir: "build/"
 		},
 		notify: false
 	});
@@ -137,7 +148,7 @@ gulp.task("browser-sync", function (){
  );
  
  gulp.task("watch", function (){
-	gulp.watch("app/index.html", ['html'])
+	gulp.watch("app/*.html", ['html'])
 	gulp.watch("app/css/**/*.css", ['css'])
  });
  
@@ -146,7 +157,7 @@ gulp.task("browser-sync", function (){
  
  });
  gulp.task('sass', function () {
-    return gulp.src('./app/styles/scss/*.scss')
+    return gulp.src('./app/styles/scss/**/*')
      .pipe(sourcemaps.init())
      .pipe(sass().on('error', sass.logError))
      .pipe(sourcemaps.write())
