@@ -2474,11 +2474,15 @@
     margin: 0px !important;
 }
 
+.mb-30 {
+    margin-bottom: 30px;
+}
+
 .mb-60 {
     margin-bottom: 60px;
 }
 
-.mb-80 {
+.mb-50 {
     margin-bottom: 80px;
 }
 
@@ -2492,6 +2496,10 @@
 
 .justify-content-center {
     justify-content: center !important;
+}
+
+.justify-content-between {
+    justify-content: space-between !important;
 }
 
 @for $i from 1 through 12 { // до 12 включительно //генерация сетки похожей на бутстрап
