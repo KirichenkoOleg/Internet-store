@@ -1,0 +1,24 @@
+@import"search";
+@import"variables";
+footer{
+    .section1{
+        padding: 25px 0;
+
+        .wrap{
+            display: flex;
+            align-items: center;
+        }
+        .account{
+            display: flex; 
+        }
+        
+        #avatar{
+            width: 30px;
+            height: 30px;
+            border-radius: 15px;
+            background-color: black;
+            
+        }
+        
+    }
+}
