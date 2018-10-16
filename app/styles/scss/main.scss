@@ -99,7 +99,26 @@ body {
                 }
                 
                 .path-2 {
-//                    padding: 20px 30px 20px;
+                    padding: 20px 30px 20px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    
+                    .aboutAuthor {
+                        display: flex;
+                        align-items: center;
+                        
+                        img {
+                            width: 30px;
+                            margin-right: 15px;
+                        }
+                        
+                        h4 {
+                            color: #546e7a;
+                            font-size: 14px;
+                            font-family: 'Roboto-Medium';
+                        }
+                    }
                 }
             }
         }
