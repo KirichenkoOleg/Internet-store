@@ -2474,8 +2474,20 @@
     margin: 0px !important;
 }
 
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+.mb-50 {
+    margin-bottom: 50px;
+}
+
 .mb-60 {
     margin-bottom: 60px;
+}
+
+.mb-70 {
+    margin-bottom: 70px;
 }
 
 .mb-80 {
@@ -2486,8 +2498,20 @@
     text-align: center !important;
 }
 
+.d-flex {
+    display: flex !important;
+}
+
 .justify-content-center {
     justify-content: center !important;
+}
+
+.justify-content-between {
+    justify-content: space-between !important;
+}
+
+.w-100 {
+    width: 100% !important;
 }
 
 @for $i from 1 through 12 { // до 12 включительно //генерация сетки похожей на бутстрап
