@@ -47,8 +47,27 @@ main{
     background: $bg-grey;
 }
 .all-new-items{
-    padding-bottom: 110px;
-    padding-top: 45px;
+    .crumbs{
+        padding-top: 50px;
+        span {
+            font-size: 15px;
+            font-family: 'Roboto-Regular';
+            color: #b0bec5;
+            a{
+                @extend span;
+                text-decoration: none;
+                padding-right: 7px;
+            }
+            .active{
+                color: #263238;
+                padding-left: 7px;
+            }
+        }
+    }
+    .row-main{
+        padding-bottom: 110px;
+        padding-top: 45px;
+    }
     .container {
         background: #ffffff;
     }
