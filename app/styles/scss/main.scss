@@ -15,16 +15,23 @@ body {
 
 section {
     
+    .sectionsTitle {
+        color: #2e353a;
+        font-size: 36px;
+        font-family: 'Roboto-Bold';
+//        margin-bottom: 60px;
+    }
+    
     &.section-1 {
         padding: 120px 0 110px 0;
         background-color: #f4f6f5;
         
-        .sectionsTitle {
-            color: #2e353a;
-            font-size: 36px;
-            font-family: 'Roboto-Bold';
-            margin-bottom: 60px;
-        }
+//        .sectionsTitle {
+//            color: #2e353a;
+//            font-size: 36px;
+//            font-family: 'Roboto-Bold';
+//            margin-bottom: 60px;
+//        }
         
         .nav-tabs {
             display: flex;
@@ -223,11 +230,11 @@ section {
 .section-2 {
     padding: 120px 0px;
     
-    .sectionsTitle {
-        color: #2e353a;
-        font-size: 36px;
-        font-family: 'Roboto-Bold';
-    }
+//    .sectionsTitle {
+//        color: #2e353a;
+//        font-size: 36px;
+//        font-family: 'Roboto-Bold';
+//    }
     
     .allProducts {
         
@@ -321,10 +328,66 @@ section {
         padding: 110px 0;
         
         .bg-green-block {
-            padding: 75px 0;
+            justify-content: space-between;
+            padding: 75px 60px;
             background-color: $green;
             width: 100%;
             max-width: 650px;
+            
+            h5 {
+                color: $white;
+                font-size: 30px;
+                font-family: 'Roboto-Regular';
+                
+                span {
+                    font-family: 'Roboto-Bold';
+                }
+            }
+            
+            .button {
+                font-family: 'Roboto-Regular';
+                padding: 25px 40px;
+                background-color: $white;
+                color: #2e353a;
+                font-size: 18px;
+                font-weight: 600;
+                transition-duration: .2s;
+                
+                &:hover {
+                    color: $green;
+                }
+            }
         }
+    }
+}
+
+.section-5 {
+    padding: 120px 0;
+    
+    .tutorials {
+        .wrapper {
+            padding-bottom: 40px;
+            background-color: #f8f8f8;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            &:hover {
+                box-shadow: 0 5px 10px #d8d9d9;
+                transition-duration: .2s;
+            }
+            
+            img {
+                width: 100%;
+                margin-bottom: 40px;
+            }
+            
+            .nameTutorials {            
+                font-size: 24px;
+                color: #2e353a;
+                font-family: 'Roboto-Bold';
+                font-weight: 600;
+            }
+        }        
     }
 }
