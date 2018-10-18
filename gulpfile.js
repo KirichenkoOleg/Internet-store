@@ -10,13 +10,14 @@ const runSequence = require('run-sequence');
 const reload = browserSync.reload;
 const sass = require('gulp-sass');
 const sourcemaps = require ('gulp-sourcemaps');
+const rigger = require('gulp-rigger');
 
 const path = {
 	src:{
 		html:["app/index.html",
 		"app/components/*.html"],
 		html28:"app/components/contact.html",
-		styles21:["app/styles/upload_product.css","app/styles/fontawesome/fontawesome.css"],
+		styles21:["app/styles/upload_product.css","app/styles/fontawesome/fontawesome.css","app/styles/fontawesome/solid.css"],
 		styles28:["app/styles/contact.css","app/styles/fontawesome/fontawesome.css","app/styles/fontawesome/solid.css"],
 		styles23:["app/styles/withdrawals.css","app/styles/fontawesome/fontawesome.css"],
 		styles4:["app/styles/all_new_item.css","app/styles/fontawesome/fontawesome.css"],
@@ -75,6 +76,7 @@ gulp.task("css3",function(){
 gulp.task("html",function(){
 	return gulp
 		.src(path.src.html)
+		.pipe(rigger())
 		.pipe(gulp.dest(path.build.html))
 		.pipe( reload({stream: true}));
 });
@@ -166,3 +168,4 @@ gulp.task("browser-sync", function (){
      .pipe(gulp.dest('./app/styles'));
    });
  gulp.task ( "default", ['server']);
+ 
