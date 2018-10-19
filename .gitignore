@@ -2,7 +2,8 @@
 /build
 /node_modules
 /.vscode
-/app/styles/*.css
-
-
-
+/app/styles/main.css
+/app/styles/upload_product.css
+/app/styles/withdrawals.css
+/app/styles/contact.css
+/app/styles/all_new_item.css
