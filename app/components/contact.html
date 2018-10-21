@@ -10,9 +10,17 @@
 <body>
     //= components/header.html
     <main>
-        
+            
         <div class="container-fluid">
-            <div class="container">
+                <div class="container crumbs ">
+                        <span>
+                            <a href="#">Home</a>
+                             - 
+                            <a class="active" href="#">Product Page</a>
+                        </span>
+                    </div>
+            <div class="container bg">
+                    
                 <div class="section1">
                     <div class="title">
                     <h2>Contact With Us</h2>
@@ -31,7 +39,7 @@
                                 <div class="wraper">
                                         <i class="fa fa-map-marker" aria-hidden="true"></i>
                                         <div class="address">
-                                             <h3>Our Office Address</h3>
+                                             <h3 class="line">Our Office Address</h3>
                                  
                                  <address>PO Box 16122 Collins Street West 
                                      Victoria 8007 Australia</address>
@@ -40,7 +48,7 @@
                                 <div class="wraper">
                                         <i class="fa fa-phone" aria-hidden="true"></i>
                                     <div class="address">
-                                            <h3>Phone</h3>
+                                            <h3 class="line">Phone</h3>
                                             <a href="tel:+61 3 8376 6284">+61 3 8376 6284</a>
                                     </div>
                                 </div>
@@ -48,7 +56,7 @@
                                         <i class="fa fa-envelope" aria-hidden="true"></i>
 
                                      <div class="address">
-                                            <h3>E-mail</h3>
+                                            <h3 class="line">E-mail</h3>
                                             <a href="mailto:info@foxtar.com">info@foxtar.com</a> 
                                      </div>
                                  </div>   
@@ -58,20 +66,21 @@
 
                         </div>
                         <div class="col-8">
-                            <h2>Drop Us A Message </h2>
-                            <div class="form-group">
-                                <form action="http://ab-w.net/comments.php" method="post" name="commentform" id="commentform">
-                                  <input type="text" name="author" id="author" value="" size="25" />
+                                <form>
+                                        <h2>Drop Us A Message </h2>
+                                        <div class="form-grup">
+                                             <input type="text"  id="name" value=""  placeholder="Name*" />
 
-                                  <input type="text" name="email" id="email" value="" size="25" />
+                                            <input type="text" id="email" value="" placeholder="E-mail*" />
+                                        </div>
+                                 
                                     
+                                   <textarea placeholder="Message*"  id="Message" ></textarea>
                                     
-                                   <textarea name="comment" id="comment" cols="48" rows="8"> </textarea>
+                                    <button>send Message</button>
                                     
-                                    <input name="submit" type="submit" id="submit" value="Отправить" />
-                                    
-                                    </form>
-                            </div>
+                                </form>
+                            
                         </div>
                     </div>
             </div>

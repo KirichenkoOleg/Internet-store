@@ -1,7 +1,15 @@
 * {
 	box-sizing: border-box; //в reset.scss его нету
 }
-
+@font-face {
+  font-family: 'Raleway';
+  
+    src: url('../fonts/Raleway-Bold/Raleway-Bold.woff2') format('woff2'),
+         url('../fonts/Raleway-Bold/Raleway-Bold.woff') format('woff'),
+         url('../fonts/Raleway-Bold/Raleway-Bold.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
 @font-face {
     font-family: 'Roboto-Bold';
     src: url('../fonts/Roboto-Bold/Roboto-Bold.eot');
