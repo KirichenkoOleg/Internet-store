@@ -13,25 +13,102 @@ body {
 	}
 }
 
+header {
+    
+    .section1 {
+        .wrap {
+            
+            .col-9 {                
+                .wrap {
+                    justify-content: flex-end;
+                    
+                    div[class|="col"] {
+                        width: auto;
+                    }
+                    
+                    .icon-group {                    
+                        .bell {
+                            display: none;
+                        }
+
+                        .envelope {
+                            display: none;
+                        }
+                        
+                        .cart {
+                            
+                            &::before {
+                                position: absolute;
+                                top: -5px;
+                                right: -5px;
+                                width: 15px;
+                                height: 15px;
+                                border-radius: 50%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                content: "8";
+                                color: $white;
+                                font-size: 11px;
+                                background-color: #e74c3c;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+
+                    .account {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    
+    .section3 {
+        background-image: none;
+        height: auto;
+        padding: 155px 0 175px;
+        background: url(../img/banner_image-home-page.png) no-repeat center;
+        background-size: cover;
+        
+        .row {
+            .col-7 {
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                
+                h3 {
+                    font-size: 20px;
+                    color: $white;
+                    font-family: 'Roboto-Medium';
+                    margin-bottom: 50px;
+                    
+                    &::before {
+                        display: block;
+                        content: "Welcome To Foxtar Market Place!";
+                        color: $white;
+                        font-size: 48px;
+                        font-family: 'Roboto-Bold';
+                        margin-bottom: 35px;
+                    }
+                }
+            }
+        }
+    }
+}
+
 section {
     
     .sectionsTitle {
         color: #2e353a;
         font-size: 36px;
         font-family: 'Roboto-Bold';
-//        margin-bottom: 60px;
     }
     
     &.section-1 {
         padding: 120px 0 110px 0;
         background-color: #f4f6f5;
-        
-//        .sectionsTitle {
-//            color: #2e353a;
-//            font-size: 36px;
-//            font-family: 'Roboto-Bold';
-//            margin-bottom: 60px;
-//        }
         
         .nav-tabs {
             display: flex;
@@ -229,12 +306,6 @@ section {
 
 .section-2 {
     padding: 120px 0px;
-    
-//    .sectionsTitle {
-//        color: #2e353a;
-//        font-size: 36px;
-//        font-family: 'Roboto-Bold';
-//    }
     
     .allProducts {
         
