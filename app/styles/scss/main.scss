@@ -34,6 +34,26 @@ header {
                         .envelope {
                             display: none;
                         }
+                        
+                        .cart {
+                            
+                            &::before {
+                                position: absolute;
+                                top: -5px;
+                                right: -5px;
+                                width: 15px;
+                                height: 15px;
+                                border-radius: 50%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                content: "8";
+                                color: $white;
+                                font-size: 11px;
+                                background-color: #e74c3c;
+                                cursor: pointer;
+                            }
+                        }
                     }
 
                     .account {
