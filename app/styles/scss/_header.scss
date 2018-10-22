@@ -2,6 +2,37 @@
 @import"search";
 @import "variables";
 @import "styles";
+@mixin circul {
+    width: 14px;
+    height: 14px;
+    border-radius: 7px;
+    position: absolute;
+    transform: translate(8px,-13px);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    
+}
+.crumbs{
+    padding-top: 50px;
+    padding-bottom: 45px;
+    span {
+        font-size: 15px;
+        font-family: 'Roboto-Regular';
+        color: #b0bec5;
+        a{
+            @extend span;
+            text-decoration: none;
+            padding-right: 7px;
+        }
+        .active{
+            color: #263238;
+            padding-left: 7px;
+        }
+    }
+}
 .line::after{
     content: '';
     margin:  20px 0;
@@ -40,21 +71,29 @@ header{
                 background: #f5f5f5 ;
                 color: #263238;
                 position: relative;
+                &:hover{
+                    box-shadow: 0px 0px 8px 1px rgba(0,0,0,1);
+                    cursor: pointer;
+                }
 
             }
             .bell:before{
+                @include circul;
                 content: '8';
-                width: 14px;
-                height: 14px;
-                border-radius: 7px;
                 background-color:#fcb322;
-                position: absolute;
-                transform: translate(8px,-13px);
-                color: white;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-size: 10px;
+                
+            }
+            .envelope::before{
+                @include circul;
+                content: '5';
+                background-color: #ef6c00;
+
+            }
+            .cart:before{
+                @include circul;
+                content: '8';
+                background-color: #95c85a;
+
             }
         }
         }
@@ -81,6 +120,7 @@ header{
             padding: 0 0;
         }
         button{
+            cursor: pointer;
             font-family: 'Roboto-Regular';
             padding: 10px 15px;
             background: #b24a42;
@@ -88,6 +128,9 @@ header{
             color: white;
             border: none;
             border-radius: 3px;
+            &:hover{
+                box-shadow: inset -1px 1px 19px 1px rgba(0,0,0,1);
+            }
         }
         #avatar{
             margin: 0 10px;
@@ -108,9 +151,12 @@ header{
             text-decoration: none;
             color: white;
             font-size: 14px;
+            &:hover{
+                text-decoration: underline;
+            }
         }
           a:not(:first-child){
-            padding-left: 30px;
+            margin-left: 30px;
         }
     }
     .section3{
