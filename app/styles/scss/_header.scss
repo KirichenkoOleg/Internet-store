@@ -128,8 +128,12 @@ header{
             color: white;
             border: none;
             border-radius: 3px;
+            
             &:hover{
                 box-shadow: inset -1px 1px 19px 1px rgba(0,0,0,1);
+            }            
+            &.login {
+                display: none;// для всех страниц кроме main-03_home-page
             }
         }
         #avatar{

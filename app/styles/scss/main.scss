@@ -17,47 +17,49 @@ header {
     
     .section1 {
         .wrap {
-            
-            .col-9 {                
+            .col-9 {
                 .wrap {
-                    justify-content: flex-end;
+                    justify-content:  flex-end;
                     
-                    div[class|="col"] {
+                    .col-5, 
+                    .col-3 {
                         width: auto;
                     }
                     
-                    .icon-group {                    
+                    .icon-group {
+                        margin-right: 65px;
+                        
                         .bell {
-                            display: none;
-                        }
-
-                        .envelope {
-                            display: none;
+                            display: none; //в page_home этого элемента нет
                         }
                         
-                        .cart {
-                            
+                        .envelope {
+                            display: none; //в page_home этого элемента нет
+                        }
+                        
+                        .cart {                            
                             &::before {
-                                position: absolute;
-                                top: -5px;
-                                right: -5px;
-                                width: 15px;
-                                height: 15px;
-                                border-radius: 50%;
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                content: "8";
-                                color: $white;
-                                font-size: 11px;
                                 background-color: #e74c3c;
-                                cursor: pointer;
                             }
                         }
                     }
-
+                    
                     .account {
-                        display: none;
+                        display: none; //в page_home этого элемента нет
+                    }
+                    
+                    .col-1 {
+                        display: flex;
+                        justify-content: flex-end;
+                        position: relative;
+                        
+                        .login {
+                            display: inline-block;
+                            position: absolute;
+                            top: 0;
+                            left: -60px;
+                            background-color: $green;
+                        }
                     }
                 }
             }
@@ -90,9 +92,25 @@ header {
                         color: $white;
                         font-size: 48px;
                         font-family: 'Roboto-Bold';
+                        margin: 0 -45px; //для ровного отображения текста
                         margin-bottom: 35px;
                     }
                 }
+            }
+        }
+        
+        @media (max-width: 1200px) {            
+            .row {
+                .col-7 {
+                    h3 {
+                        transition-duration: .4s;
+                        font-size: 1em;
+                        
+                        &::before {
+                            font-size: calc(1em * 2);
+                        }
+                    }
+                }                
             }
         }
     }
