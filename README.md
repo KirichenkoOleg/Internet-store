@@ -8,6 +8,6 @@ npm install
 gulp server
 ## Developers:
 ### Kirichenko Oleg (page "main")
-### Rigikov Igor (page "Withdrawals")
+### Ryzhikov Igor (page "Withdrawals")
 ### Gladkaya Anzhelika (page "all_new_items")
-### Nechaev Egor (page "contact footer header gulpfile")
+### Nechaev Egor (page "contact footer header gulpfile"
