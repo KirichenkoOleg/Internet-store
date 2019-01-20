@@ -1,6 +1,6 @@
 # Instruction:
 ## Clone project
-git clone https://github.com/mentar123/Internet_magazin.git
+git clone https://github.com/KirichenkoOleg/Internet-store.git
 ## Upload npm packages:
 npm install
 
